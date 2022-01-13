@@ -1,0 +1,22 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Circle = void 0;
+const Shape_1 = require("./Shape");
+class Circle extends Shape_1.shape {
+    constructor(thex, they, _radius) {
+        super(thex, they);
+        this.thex = thex;
+        this.they = they;
+        this._radius = _radius;
+    }
+    get x() {
+        return this._radius;
+    }
+    set x(value) {
+        this._radius = value;
+    }
+    getInfo() {
+        return super.getInfo() + `radius=${this._radius}`;
+    }
+}
+exports.Circle = Circle;
